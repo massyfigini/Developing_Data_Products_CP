@@ -1,4 +1,4 @@
-# DevelopingDataCP1
+# DevelopingDataProductsCP1
 ### Developing Data Product Course Project 1: map for results in Monza e Brianza of the 2016 Italian referendum
 
 *Course Project Instruction: Create a web page using R Markdown that features a map created with Leaflet.*  
