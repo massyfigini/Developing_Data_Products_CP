@@ -1,0 +1,54 @@
+---
+title: "Italian referendum results in Monza and Brianza province"
+author: "Massimiliano Figini"
+date: "March 2, 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+This map shows the results of the last Italian constitutional referendum (4 December 2016) in the municipality of my province, Monza and Brianza (Lombardy).  
+
+
+**Data Information**  
+Each record is a municipality of the province.The columns are:  
+*denominazione*: name.  
+*latitudine*: latitude.  
+*longitudine*: longitude.  
+*ELETTORI*: potential voters for the referendum.  
+*VOTANTI*: voters for the referendum.  
+*NUMVOTISI*: number of YES voters.  
+*NUMVOTINO*: number of NO voters.
+
+**Map design**  
+*Circles colors*: red for the municipality where NO won (over 50% of valid vote was NO), green where YES won.  
+*Circles dimension*: proportional to the number of voters.  
+*Circles opacity*: based on election turnout (voters percentage).  
+*Circles label*: name of municipality (when step on it).  
+*Circles popup*: results of referendum for the municipality (when click on it) 
+
+</br>
+
+```{r code, echo=TRUE}
+# import package
+library(leaflet)
+# getting and cleaning data
+MB <- read.csv2("C:/Users/figinim/Documents/Studies/Developing Data Products/Course Project 1/Final_MB.csv")
+options(digits=9)
+MB$latitudine <- as.numeric(as.character(MB$latitudine))
+MB$longitudine <- as.numeric(as.character(MB$longitudine))
+# build map
+coord <- data.frame(lat = MB$latitudine,lng = MB$longitudine)
+coord <- coord %>% leaflet(width = "100%") %>% addTiles()
+coord <- coord %>% 
+         addCircles(weight = 1, radius = sqrt(MB$ELETTORI)*7, fillOpacity=(MB$VOTANTI/MB$ELETTORI)^7, 
+                    fillColor = ifelse(MB$NUMVOTISI/(MB$NUMVOTISI+MB$NUMVOTINO)>0.5,"green","red"), 
+                    label = MB$denominazione, 
+                    popup = paste("<dt>",MB$denominazione,"</dt>",
+                            "<li>","YES: ",as.character((round(MB$NUMVOTISI/MB$VOTANTI,3))*100),"%","</li>",
+                            "<li>","NO: ",as.character((round(MB$NUMVOTINO/MB$VOTANTI,3))*100),"%","</li>",                                "<li>","Null:",as.character((round((MB$VOTANTI-(MB$NUMVOTISI+MB$NUMVOTINO))
+                                   /MB$VOTANTI,3))*100),"%","</li>", sep=""), 
+                    popupOptions = popupOptions(minWidth=75))
+coord <- coord %>% addLegend(labels = c("YES", "NO"), colors = c("green", "red"))
+coord
+```
