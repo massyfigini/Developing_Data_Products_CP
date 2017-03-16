@@ -19,7 +19,7 @@ The application must include the following:
 - The documentation should be at the Shiny website itself. Do not post to an external link.
 
 
-### The project
+### My project
 
 “Hierarchical clustering on mtcars” is my app for the third Course Project of the Developing Data Product Course, part of the Data Science Specialization by Johns Hopkins University on Coursera.  
 The app allow to perform a hierarchical clustering on the mtcars data.
