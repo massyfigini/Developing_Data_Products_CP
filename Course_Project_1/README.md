@@ -1,8 +1,13 @@
 ### Developing Data Product Course Project 1: map for results in Monza e Brianza of the 2016 Italian referendum
 
+This is the first project of the course.
+
+You can see the result published at this link:
+http://massimilianofigini.com/Referendum_Course_Project_1.html
+
 *Course Project Instruction: Create a web page using R Markdown that features a map created with Leaflet.*  
 
-This map shows the results of the last Italian constitutional referendum (4 December 2016) in the municipality of my province, Monza and Brianza (Lombardy).  
+The map shows the results of the last Italian constitutional referendum (4 December 2016) in the municipality of my province, Monza and Brianza (Lombardy).  
 
 **Data Information**  
 Each record is a municipality of the province.The columns are:  
