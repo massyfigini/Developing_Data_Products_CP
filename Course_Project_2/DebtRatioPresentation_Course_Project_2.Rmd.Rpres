@@ -1,0 +1,29 @@
+Italian public debt growth from 1960 to 2015
+========================================================
+author: Massimiliano Figini
+date: 2017-03-06
+autosize: true
+
+Intro
+========================================================
+
+The graph in the next slide show the Italian public debt from 1960 to 2015.  
+The size of the marker is proportional to the GDP.  
+When step on a marker you can view the data with the Debt-to-GDP.  
+
+This is the second assignment of the Developing Data Product Course, part of the Data Science Specialization by Johns Hopkins University on Coursera.
+
+
+Graph
+========================================================
+```{r code1, echo=FALSE}
+# import package
+library(plotly)
+# getting and cleaning data
+myfile <- file.path("C:/Users/figinim/Documents/Studies/Developing Data Products/Course Project 2","Debito-PIL_Italia_1960-2015.csv") 
+DP <- read.csv2(myfile)
+# create the graph
+p = plot_ly(DP, x = ~Anno, y = ~Debito, type = "scatter", size = ~PIL,hoverinfo = "text", text = ~paste("Year:",Anno,"</br>Debt:",Debito,"</br>GDP:",PIL,"</br>Debt-to-GDP:",round(Debito/PIL*100),4)) %>% layout(title = "Italian public debt growth",xaxis = list(title = "Year"),yaxis = list(title = "Public debt in euros"))
+htmlwidgets::saveWidget(as.widget(p), file = "demo.html")
+```
+<iframe src="demo.html" style="position:absolute;height:100%;width:100%"></iframe>
