@@ -1,4 +1,4 @@
-### Developing Data Product Course Project 3: hierarchical clustering on mtcars
+## Developing Data Product Course Project 3: hierarchical clustering on mtcars
 
 This is the second project of the course.
 
@@ -20,36 +20,33 @@ The application must include the following:
 *
 
 
-####The project####
+###The project
 
 “Hierarchical clustering on mtcars” is my app for the third Course Project of the Developing Data Product Course, part of the Data Science Specialization by Johns Hopkins University on Coursera.  
-
 The app allow to perform a hierarchical clustering on the mtcars data.
 The user can choose what cars and what variables will be part of the analysis, and in how many group the cars will be splitted.  
 
 
-####The Data####
+###The Data
 
 The mtcars data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models).
 The variables are:
+- mpg: Miles/(US) gallon
+- cyl: Number of cylinders
+- disp: Displacement (cu.in.)
+- hp: Gross horsepower
+- drat: Rear axle ratio
+- wt: Weight (1000 lbs)
+- qsec: ¼ mile time
+- vs: V/S
+- am: Transmission (0 = automatic, 1 = manual)
+- gear: Number of forward gears
+- carb: Number of carburetors
 
-mpg: Miles/(US) gallon
-cyl: Number of cylinders
-disp: Displacement (cu.in.)
-hp: Gross horsepower
-drat: Rear axle ratio
-wt: Weight (1000 lbs)
-qsec: ¼ mile time
-vs: V/S
-am: Transmission (0 = automatic, 1 = manual)
-gear: Number of forward gears
-carb: Number of carburetors
 
-
-####App use####
+###App use
 
 In the left part of the webpage, you have two tab:
-
 The documentation tab show the instruction for the app use and a description of the data.
 In the input tab, you can choose how many groups the app will split the data, and which variables and which cars will be used for the clustering.
 On the right, the cluster and the dendrogram will update at every change.
