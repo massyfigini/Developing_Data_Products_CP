@@ -1,6 +1,6 @@
 ### Developing Data Product Course Project 2: Italian public debt growth from 1960 to 2015
 
-This is the second Course Project of the course.
+This is the second project of the course.
 
 You can see the presentation published at this link:
 http://massyfigini.github.io/ItalianPublicDebtGraph.html#/
