@@ -3,7 +3,7 @@
 This is the second project of the course.
 
 You can see the presentation published at this link:
-[LINK]
+https://massyfigini.shinyapps.io/Hierarchical_Clustering_mtcars/
 
 ### Course Project Instruction
 
