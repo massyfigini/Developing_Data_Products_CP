@@ -3,7 +3,7 @@
 This is the second project of the course.
 
 You can see the presentation published at this link:
-http://massyfigini.github.io/ItalianPublicDebtGraph.html#/
+http://massyfigini.github.io/assets/ItalianPublicDebtGraph.html#/
 
 *Course Project Instruction: Create a web page presentation using R Markdown that features a plot created with Plotly.*  
 
