@@ -3,7 +3,7 @@
 This is the first project of the course.
 
 You can see the result published at this link:
-http://massimilianofigini.com/Referendum_Course_Project_1.html
+https://massyfigini.github.io/Referendum_Course_Project_1.html
 
 *Course Project Instruction: Create a web page using R Markdown that features a map created with Leaflet.*  
 
