@@ -10,5 +10,5 @@ My three R Course Projects of Developing Data Product Course by Johns Hopkins Un
    Result: https://massyfigini.github.io/assets/ItalianPublicDebtGraph.html#/  
 
 3. Shiny app: hierarchical clustering on mtcars.  
-   ReadMe: https://github.com/massyfigini/Developing_Data_Products_CP/blob/master/Course_Project_3/README.md
-   Result: https://massyfigini.shinyapps.io/Hierarchical_Clustering_mtcars/
+   ReadMe: https://github.com/massyfigini/Developing_Data_Products_CP/blob/master/Course_Project_3/README.md  
+   Result: https://massyfigini.shinyapps.io/Hierarchical_Clustering_mtcars/  
